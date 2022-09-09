@@ -11,6 +11,12 @@ def maximo_recursivo(*args) -> float:
         - No utilizar la ninguna otra función salvo maximo_recursivo
         - Resolver de manera recursiva
     """
+    if len(args) == 1:
+        return args[0]
+    elif args[1] > args[0]:
+        return maximo_recursivo(*args[1:])
+    else:
+        return maximo_recursivo(args[0],*args[2:])
 
 
 # NO MODIFICAR - INICIO
